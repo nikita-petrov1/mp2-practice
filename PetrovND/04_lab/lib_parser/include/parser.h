@@ -1,4 +1,3 @@
-#pragma once
 #ifndef _PARSER_H
 #define _PARSER_H
 
@@ -14,9 +13,9 @@ private:
 	static int getPrecedence(const string& op);
 public:
 	static bool isValidExpression(const vector<string>& infixExpression);
-	static vector<string> splitExpression(const string& expression);
-	static vector<string> infixToPostfix(const vector<string>& infixExpression);
-	static map<string, double> getOperandValues(const vector<string>& tokens);
+	static vector<string> splitExpression(string expression);
+	static vector<string> infixToPostfix(vector<string> infixExpression);
+	static map<string, double> getOperandValues(const vector<string>& tokens, double x, double y, double z);
 	static double evaluatePostfixExpression(const map<string, double>& operandValues,
 		vector<string>& postfixExpression);
 };

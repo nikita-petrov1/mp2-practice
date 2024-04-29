@@ -15,9 +15,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEAS
 
 set(MP2_LIBRARY_LISTS "${PROJECT_NAME}_lists")
 set(MP2_LIBRARY_POLYNOMS "${PROJECT_NAME}_polynoms")
+set(MP2_LIBRARY_PARSER "${PROJECT_NAME}_parser")
 set(MP2_TESTS   "tests_${PROJECT_NAME}")
 set(MP2_INCLUDE_LISTS "${CMAKE_CURRENT_SOURCE_DIR}/lib_tlist/include")
 set(MP2_INCLUDE_POLYNOMS "${CMAKE_CURRENT_SOURCE_DIR}/lib_tpolynom/include")
+set(MP2_INCLUDE_PARSER "${CMAKE_CURRENT_SOURCE_DIR}/lib_parser/include")
 
 
 # BUILD
@@ -26,6 +28,7 @@ add_subdirectory(gtest)
 add_subdirectory(tests)
 add_subdirectory(lib_tlist/src)
 add_subdirectory(lib_tpolynom/src)
+add_subdirectory(lib_parser/src)
 
 # REPORT
 message( STATUS "" )
